@@ -2,8 +2,9 @@ const path = require("path");
 const webpack = require("webpack");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const WebpackPwaManifest = require("webpack-pwa-manifest");
+const SWPrecacheWebpackPlugin = require("sw-precache-webpack-plugin");
 
-module.exports = { 
+const config = { 
     entry: {
         app: "./assets/js/script.js",
         events: "./assets/js/events.js",
@@ -63,3 +64,5 @@ module.exports = {
     ],
     mode: 'development'
 };
+
+module.exports = config;
